@@ -98,6 +98,7 @@ modifiers = [ "super" ]
 [autostart]
 exec = [
   "xsetroot -cursor_name left_ptr",
+  "/home/thees/.config/nimdow/widget1.sh",
   #"firefox",
   #"st",
   "nitrogen --restore",
@@ -112,7 +113,7 @@ exec = [
   borderColorUrgent = "#ff5555"
   # Bar settings
   barHeight = 25
-  windowTitlePosition = "center"
+  windowTitlePosition = "left"
   barBackgroundColor = "#282a36"
   barForegroundColor = "#f8f8f2"
   barSelectionColor = "#50fa7b"
