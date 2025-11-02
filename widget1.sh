@@ -1,6 +1,14 @@
 #!/bin/bash
 
 while true; do
+
+    red=$'\e[31m'
+    green=$'\e[32m'
+    blue=$'\e[34m'
+    magenta=$'\e[35m'
+    cyan=$'\e[36m'
+    white=$'\e[0m'    
+
     # CPU-Auslastung
     CPU=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *$[0-9.]*$%* id.*/\1/" | awk '{print 100 - $1}')
 
@@ -17,8 +25,8 @@ while true; do
     VOLUME=$(amixer get Master | grep -o "[0-9]*%" | head -n 1)
 
     # Setzen der xsetroot-Anzeige
-    xsetroot -name "DISK: ${DISK} | TIME: ${TIME} | VOLUME: ${VOLUME}"
+    xsetroot -name "${red}DISK: ${DISK}${white} | ${cyan}TIME: ${TIME}${white} | ${magenta}VOLUME: ${VOLUME}"
 
-    sleep 5  # Aktualisierungsintervall
+    sleep 0.1  # Aktualisierungsintervall
 done
 
