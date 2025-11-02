@@ -1,0 +1,305 @@
+# App Rules
+# Example:
+[[appRule]]
+class = "*Alacritty*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 1 ]
+# state = "floating" # normal, floating, and fullscreen are all valid.
+
+[[appRule]]
+class = "*firefox*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 2 ]
+
+[[appRule]]
+class = "*Thunar*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 3 ]
+
+[[appRule]]
+class = "*vlc*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 4 ]
+
+[[appRule]]
+class = "*thunderbird*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 5 ]
+
+[[appRule]]
+class = "*Emacs*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 6 ]
+
+[[appRule]]
+class = "*supertux2*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 7 ]
+
+[[appRule]]
+class = "*kitty*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 8 ]
+
+[[appRule]]
+class = "*mpv*"
+instance = ""
+title = ""
+monitor = 1
+tags = [ 9 ]
+
+# Start external programs
+[[startProcess]]
+command = "pkill nimdow"
+keys = [ "q" ]
+modifiers = [ "super", "shift" ]
+
+[[startProcess]]
+command = "firefox"
+keys = [ "b" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "dmenu_run -l 10"
+keys = [ "d" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "alacritty"
+keys = [ "Return" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "thunar"
+keys = [ "e" ]
+modifiers = [ "super" ]
+
+# Example: Start process when region is clicked, see github wiki for what constitutes a region
+# [[startProcess]]
+# command = "notify-send \"Id: %1, rx: %2, cx: %4, cy: %5, w: %6, b: %7\""
+# clickRegion = 0
+
+[autostart]
+exec = [
+  "xsetroot -cursor_name left_ptr",
+  #"firefox",
+  #"st",
+  "nitrogen --restore",
+  "picom",
+]
+
+[settings]
+  # Window settings
+  borderWidth = 1
+  borderColorUnfocused = "#282a36"
+  borderColorFocused = "#50fa7b"
+  borderColorUrgent = "#ff5555"
+  # Bar settings
+  barHeight = 25
+  windowTitlePosition = "center"
+  barBackgroundColor = "#282a36"
+  barForegroundColor = "#f8f8f2"
+  barSelectionColor = "#50fa7b"
+  barUrgentColor = "#ff5555"
+  barHasWindowsColor = "#f5e0dc"
+  barShowIndicator = false
+  barTransparency = 255 # 0 to 255
+  barFonts = [
+    "JetBrainsMonoNerdFont:size=13:antialias=true",
+    "NotoColorEmoji:size=10:antialias=true"
+  ]
+  # Layout settings
+
+
+
+
+  gapSize = 9 # 12
+  outerGap = 20 # 0
+
+
+
+
+
+  resizeStep = 10
+  # Scratchpad settings
+  scratchpadWidth = 500
+  scratchpadHeight = 300
+  # General settings
+  loggingEnabled = false
+  reverseTagScrolling = false
+  # The key used for moving and resizing windows.
+  # All options: "control", "shift", "alt", "super", "caps lock", "mod1", "mod2", "mod3", "mod4", "mod5"
+  # alt is an alias for Mod1Mask,
+  # super is an alias for Mod4Mask
+  # See keyutils.nim for details
+  modKey = "super"
+
+# Window manager controls
+[controls]
+  [controls.reloadConfig]
+  keys = [ "r" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.focusPrevious]
+  keys = [ "k" ]
+  modifiers = [ "super" ]
+
+  [controls.focusNext]
+  keys = [ "j" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowPrevious]
+  keys = [ "k" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowNext]
+  keys = [ "j" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.toggleFullscreen]
+  keys = [ "f" ]
+  modifiers = [ "super" ]
+
+  [controls.destroySelectedWindow]
+  keys = [ "q" ]
+  modifiers = [ "super" ]
+
+  [controls.goToPreviousTag]
+  keys = [ "w" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowToPreviousTag]
+  keys = [ "w" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.focusPreviousMonitor]
+  keys = [ "comma" ]
+  modifiers = [ "super" ]
+
+  [controls.focusNextMonitor]
+  keys = [ "period" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowToPreviousMonitor]
+  keys = [ "comma" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowToNextMonitor]
+  keys = [ "period" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.increaseMasterCount]
+  keys = [ "z" ]
+  modifiers = [ "super" ]
+
+  [controls.decreaseMasterCount]
+  keys = [ "x" ]
+  modifiers = [ "super" ]
+
+  [controls.toggleFloating]
+  keys = [ "space" ]
+  modifiers = [ "super" ]
+
+  [controls.jumpToUrgentWindow]
+  keys = [ "u" ]
+  modifiers = [ "super" ]
+
+  [controls.goToTag]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super" ]
+
+  [controls.goToLeftTag]
+  keys = [ "Left" ]
+  modifiers = [ "super" ]
+
+  [controls.goToRightTag]
+  keys = [ "Right" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowToTag]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowToLeftTag]
+  keys = [ "Left" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowToRightTag]
+  keys = [ "Right" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.toggleTagView]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super", "control" ]
+
+  [controls.toggleWindowTag]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super", "shift", "control" ]
+
+	[controls.increaseMasterWidth]
+	keys = [ "l" ]
+	modifiers = [ "super" ]
+
+	[controls.decreaseMasterWidth]
+	keys = [ "h" ]
+	modifiers = [ "super" ]
+
+  [controls.moveWindowToScratchpad]
+  keys = [ "s" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.popScratchpad]
+  keys = [ "s" ]
+  modifiers = [ "super" ]
+
+  [controls.rotateClients]
+  keys = [ "r" ]
+  modifiers = [ "super" ]
+
+  [controls.toggleStatusBar]
+  keys = [ "b" ]
+  modifiers = [ "super" ]
+
+# Example monitor settings:
+ [monitors]
+   [monitors.default.tags]
+   1.displayString = "" #1
+   2.displayString = "" #2
+   3.displayString = "" #3
+   4.displayString = "󰕼" #4
+   5.displayString = "" #5
+   6.displayString = "" #6
+   7.displayString = "" #7
+   8.displayString = "" #8
+   9.displayString = "" #9
+  # Set the number of master windows for ALL monitors.
+  # all.numMasterWindows = 5
+  # all.defaultMasterWidthPercentage = 60
+
+  # [monitors.1.tags]
+  # 2.displayString = "two"
+  # Set the number of master windows per-monitor.
+  # all.numMasterWindows = 3
+  # Set the number of master windows per-tag.
+  # 2.numMasterWindows = 1
+
+  # [monitors.2.tags]
+  # 2.displayString = "too"
+
+
