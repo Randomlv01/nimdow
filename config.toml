@@ -71,17 +71,22 @@ keys = [ "q" ]
 modifiers = [ "super", "shift" ]
 
 [[startProcess]]
-command = "firefox"
+command = "firefox" #firefox, nyxt, chromium --disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled
 keys = [ "b" ]
 modifiers = [ "super" ]
 
 [[startProcess]]
-command = "dmenu_run -l 10"
+command = "kitty spf"
+keys = [ "p" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "rofi -show drun" #dmenu_run -l 10, rofi -show drun
 keys = [ "d" ]
 modifiers = [ "super" ]
 
 [[startProcess]]
-command = "alacritty"
+command = "st" #alacritty, st
 keys = [ "Return" ]
 modifiers = [ "super" ]
 
@@ -98,11 +103,12 @@ modifiers = [ "super" ]
 [autostart]
 exec = [
   "xsetroot -cursor_name left_ptr",
-  "/home/thees/.config/nimdow/widget1.sh",
+#  "/home/thees/.config/nimdow/widget1.sh",
+  "slstatus",
   #"firefox",
   #"st",
   "nitrogen --restore",
-  "picom",
+#  "picom",
 ]
 
 [settings]
@@ -130,8 +136,8 @@ exec = [
 
 
 
-  gapSize = 9 # 12
-  outerGap = 20 # 0
+  gapSize = 12 # 12, 9
+  outerGap = 30 # 0, 30
 
 
 
